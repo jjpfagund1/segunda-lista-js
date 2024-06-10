@@ -76,3 +76,22 @@ function maiorMenor(){
 
     respostaCinco.innerHTML = "O maior número é: " + maior +"; e o menor é: " + menor
 }
+
+function parImpar(){
+    let respostaSeis = document.getElementById("respostaSeis")
+    let input = document.getElementById("numeros").value;
+    let numeros = input.split(",").map(Number);
+
+    let somaPares = 0;
+    let somaImpares = 0;
+
+    for (let i = 0; i < numeros.length; i++) {
+        if (numeros[i] % 2 === 0) {
+            somaPares += numeros[i];
+        } else {
+            somaImpares += numeros[i];
+        }
+    }
+
+    respostaSeis.innerHTML = "Soma dos Pares: " + somaPares +"; Soma dos Impares: " + somaImpares
+}
