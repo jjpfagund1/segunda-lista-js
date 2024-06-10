@@ -1,8 +1,8 @@
-function atividadeum(){
-    let resposta = document.getElementById("resposta")
-    let comprimento = Number(document.getElementById("comprimento").value)  
-    let lado = Number(document.getElementById("lado").value)  
-    let altura = Number(document.getElementById("altura").value)
+function atividadeUm(){
+    let respostaUm = document.getElementById("respostaUm")
+    let comprimento = document.getElementById("comprimento").value 
+    let lado = document.getElementById("lado").value
+    let altura = document.getElementById("altura").value
     
     let area = lado ** 2
     console.log("área = " + area)
@@ -10,5 +10,15 @@ function atividadeum(){
     let volume = (area * altura) / 3
     console.log("volume = " + volume)
 
-    resposta.innerHTML = "O valor do Volume da Pirâmide é igual a: " + volume + "m3"
+    respostaUm.innerHTML = "O valor do Volume da Pirâmide é igual a: " + volume + "m3"
+}
+
+function atividadeDois(){
+    let respostaDois = document.getElementById("respostaDois")
+    let mmhg = document.getElementById("mmhg").value
+    console.log("mmHg = " + mmhg)
+    let psi = mmhg / 51.715
+
+    console.log("psi = " + psi)
+    respostaDois.innerHTML = "O valor convertdi é igual a: " + psi + " PSI"
 }
