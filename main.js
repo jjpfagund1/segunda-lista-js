@@ -79,19 +79,59 @@ function maiorMenor(){
 
 function parImpar(){
     let respostaSeis = document.getElementById("respostaSeis")
-    let input = document.getElementById("numeros").value;
-    let numeros = input.split(",").map(Number);
+    let numeros = document.getElementById("numeros").value;
+    let valores = numeros.split(",").map(Number);
 
     let somaPares = 0;
     let somaImpares = 0;
 
-    for (let i = 0; i < numeros.length; i++) {
-        if (numeros[i] % 2 === 0) {
-            somaPares += numeros[i];
+    for (let i = 0; i < valores.length; i++) {
+        if (valores[i] % 2 === 0) {
+            somaPares += valores[i];
         } else {
-            somaImpares += numeros[i];
+            somaImpares += valores[i];
         }
     }
 
     respostaSeis.innerHTML = "Soma dos Pares: " + somaPares +"; Soma dos Impares: " + somaImpares
+}
+
+function divSete(){
+    let respostaSete = document.getElementById("respostaSete")
+    let numeros = document.getElementById("numeros").value
+    let valores = numeros.split(",").map(Number)
+
+    let divPSete = 0
+
+    for (let i = 0; i < valores.length; i++){
+        if(valores[i] % 7 === 0 ){
+            divPSete += 1
+        }
+    }
+
+    respostaSete.innerHTML = "A quantidade de números divisíveis por 7 é igual a: " + divPSete
+}
+
+function atividadeOito(){
+    let respostaOito = document.getElementById("respostaOito")
+    let numeros = document.getElementById("numeros").value
+    let valores = numeros.split(",").map(Number)
+
+    let divPTresECinco = 0
+    let divPCinco = 0
+    let divPTres = 0
+
+    for (let i = 0; i < valores.length; i++){
+        if(valores[i] % 3 === 0 && valores[i] % 5 === 0){
+            divPTresECinco += 1
+        }
+        if(valores[i] % 5 === 0){
+            divPCinco += 1
+        }
+        if(valores[i] % 3 === 0){
+            divPTres += 1
+        }
+    }
+
+    respostaOito.innerHTML = "A quantidade de valores divisíveis por 3 e 5 ao mesmo tempo é igual a: " + divPTresECinco + "; por 3: " + divPTres + "; por 5: " + divPCinco
 }
