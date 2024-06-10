@@ -45,3 +45,34 @@ function farPCel(){
     console.log("O resultado da Conversão é: " + celResposta)
     respostaCel.innerHTML = "O resultado da Conversão é: " + celResposta.toFixed(2)
 }
+
+function validaIdade(){
+    let respostaQuatro = document.getElementById("respostaQuatro")
+
+    let idade = document.getElementById("idade").value
+
+    if (idade >= 16){
+        respostaQuatro.innerHTML = "Você pode votar!"
+    }else{
+        respostaQuatro.innerHTML = "Você não pode votar!"
+    }
+}
+
+function maiorMenor(){
+    let respostaCinco = document.getElementById("respostaCinco")
+    let numeros = document.getElementById("numeros").value
+    let valores = numeros.split(",").map(Number)
+
+    let maior = valores[0];
+    let menor = valores[0];
+    for (var i = 1; i < valores.length; i++) {
+        if (valores[i] > maior) {
+            maior = valores[i];
+        }
+        if (valores[i] < menor) {
+            menor = valores[i];
+        }
+    }
+
+    respostaCinco.innerHTML = "O maior número é: " + maior +"; e o menor é: " + menor
+}
