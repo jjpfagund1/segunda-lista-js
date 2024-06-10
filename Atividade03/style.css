@@ -1,0 +1,18 @@
+body{
+    font-family: "Comfortaa", sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.navbar{
+    height: 1.5rem;
+    width: 7rem;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1rem;
+}
+button{
+    height: 2rem;
+    width: 11rem;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 1rem;
+}
