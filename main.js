@@ -10,7 +10,7 @@ function atividadeUm(){
     let volume = (area * altura) / 3
     console.log("volume = " + volume)
 
-    respostaUm.innerHTML = "O valor do Volume da Pirâmide é igual a: " + volume + "m3"
+    respostaUm.innerHTML = "O valor do Volume da Pirâmide é igual a: " + volume.toFixed(2) + "m3"
 }
 
 function atividadeDois(){
